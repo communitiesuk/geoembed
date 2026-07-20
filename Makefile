@@ -1,5 +1,5 @@
 .PHONY: install install-all install-spatial install-cog install-stac install-models install-local \
-       dev setup test test-fast test-cov lint format pre-commit typecheck nox check build clean \
+       dev setup setup-all test test-fast test-cov lint format pre-commit typecheck nox check build clean \
        serve-docs build-docs dbx-build dbx-upload help
 
 help: ## Show this help message
@@ -103,7 +103,7 @@ build-docs: ## Build static docs site to site/
 # ── Databricks ────────────────────────────────────────────────────────────────
 
 dbx-build: ## Build wheel to deps/whl/ for Databricks deployment
-	uv build --wheel --out-dir deps/whl/
+	uv build --wheel --out-dir dist/
 
 dbx-upload: ## Show command to upload wheel to UC Volume
 	@echo "Upload: deps/whl/ → /Volumes/.../dependencies/whl/"
