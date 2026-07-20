@@ -1,0 +1,3 @@
+# Types
+
+::: geoembed.core.types

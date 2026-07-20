@@ -1,0 +1,86 @@
+site_name: geoembed
+site_description: Generate vector embeddings from geospatial imagery at scale.
+site_url: https://communitiesuk.github.io/geoembed
+repo_url: https://github.com/communitiesuk/geoembed
+repo_name: communitiesuk/geoembed
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quickstart.md
+      - Workflow: getting-started/workflow.md
+#   - Workflow: workflow.md
+  - API Reference:
+      - api/index.md
+      - Core:
+          - Config: api/core/config.md
+          - Types: api/core/types.md
+          - Naming: api/core/naming.md
+      - Chipping:
+          - Services: api/chipping/services.md
+          - Strategies: api/chipping/strategies.md
+          - Spark Pipeline: api/chipping/spark.md
+          - From Embeddings: api/chipping/from_embeddings.md
+      - Models:
+          - Base: api/models/base.md
+          - DOFA: api/models/dofa.md
+          - Registry: api/models/registry.md
+      - Images:
+          - COG Conversion: api/images/cog.md
+      - Metadata:
+          - Readers: api/metadata/readers.md
+          - Spark Extraction: api/metadata/spark.md
+          - STAC Catalog: api/metadata/stac_catalog.md
+      - Backends:
+          - Spark GPU: api/backends/spark.md
+      - I/O:
+          - Writers: api/io/writers.md
+          - Tile Sorting: api/io/tile_sorting.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            members_order: source
+            docstring_style: google
+            merge_init_into_class: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
