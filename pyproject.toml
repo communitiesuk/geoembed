@@ -11,7 +11,6 @@ keywords = [
     "embeddings",
     "remote-sensing",
     "foundation-models",
-    "ray",
 ]
 requires-python = ">=3.12"
 classifiers = [
@@ -47,16 +46,9 @@ stac = [
     "defusedxml>=0.7.1",
     "pyarrow>=20.0.0",
 ]
-# spark = ["pyspark>=4.0.0", "databricks-connect==17.3.*"]
-# gpu = [
-#     "cog3pio>=0.1.0; python_version>='3.13'",
-# ]
-# dali = ["nvidia-dali-cuda120>=1.35.0"]
 local = ["rioxarray>=0.19.0", "xarray>=2024.1.0", "dask[complete]>=2025.1.0"]
 cog = ["rio-cogeo>=7.0.1", "rasterio>=1.4.3"]
 all = ["geoembed[models,spatial,stac,local,cog]"]
-# Note: [gpu] (cog3pio) requires Python >=3.13 and CUDA — install separately:
-# pip install geoembed[gpu]
 
 [dependency-groups]
 dev = [
@@ -127,7 +119,6 @@ known-first-party = ["geoembed"]
 [tool.pyrefly]
 project-includes = ["src/geoembed"]
 python-version = "3.12"
-# Exclude modules requiring optional deps not installed locally
 project-excludes = [
     "src/geoembed/gpu/",
     "src/geoembed/io/readers/async_cog_reader.py",

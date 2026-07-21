@@ -44,10 +44,18 @@ This was a lab project so it is not currently not published to PyPI. Install fro
 
 ### From source (development)
 
+From Git:
+
 ```bash
-git clone https://github.com/communitiesuk/geoembed.git
+uv pip install git+https://github.com/communitiesuk/geoembed.git
+```
+
+Local:
+
+```bash
+git clone git+https://github.com/communitiesuk/geoembed.git
 cd geoembed
-uv sync --group dev --group docs
+uv sync --all-groups
 ```
 
 ### From wheel (Databricks)
@@ -63,8 +71,8 @@ Then on Databricks:
 dbutils.library.restartPython()
 ```
 
-Alternatively, if you're using class compute, there's an example `init.sh` script which will install
-`uv` and the Python wheel on cluster start up.
+Alternatively, if you're using class compute, there's an example `init_example.sh` script which will
+install `uv` and the Python wheel on cluster start up.
 
 ***Note***: due to Databricks Runtime conflicts you'll have to install `torchgeo` separately on a
 GPU cluster:
