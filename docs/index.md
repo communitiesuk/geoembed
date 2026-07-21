@@ -10,6 +10,8 @@ Models, such as [DOFA](https://github.com/zhu-xlab/DOFA).
 The embeddings pipeline reads entire images onto the GPU, tiles them via `torch.unfold()` using a
 chip size and stride calculation, and runs batched inference.
 
+![Pipeline flowchart](assets/pipeline_flowchart.png)
+
 It runs on Databricks with GPU-accelerated inference via Spark.
 
 It was developed as part of the Ministry of Housing, Communities and Local Government's (MHCLG) AAAI
