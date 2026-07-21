@@ -10,7 +10,10 @@ Models, such as [DOFA](https://github.com/zhu-xlab/DOFA).
 The embeddings pipeline reads entire images onto the GPU, tiles them via `torch.unfold()` using a
 chip size and stride calculation, and runs batched inference.
 
-![Pipeline flowchart](assets/pipeline_flowchart.png)
+<figure markdown="span">
+    ![Pipeline flowchart](assets/pipeline_flowchart.png)
+    <figcaption>End-to-end pipeline: COGs → Metadata → GPU tiling → embeddings → Delta. Imagery: Copyright [Bluesky International Ltd](https://bluesky-world.com/).</figcaption>
+  </figure>
 
 It runs on Databricks with GPU-accelerated inference via Spark.
 
