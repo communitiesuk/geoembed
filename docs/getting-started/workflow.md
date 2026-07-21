@@ -349,6 +349,21 @@ No chip metadata table required.
 
 ---
 
+### Output
+
+| Column | Type | Description |
+|--------|------|-------------|
+| chip_id | string | e.g., "NT6200_000042" |
+| parent_id | string | e.g., "NT6200" |
+| parent_path | string | Full COG path |
+| embedding | array\<float32\> | 768-dim DOFA embedding |
+| minx | float64 | Chip bounding box (native CRS) |
+| miny | float64 | |
+| maxx | float64 | |
+| maxy | float64 | |
+
+---
+
 ### Architecture
 
 ```
@@ -391,21 +406,6 @@ images directly to the GPU (there's an interesting
 [GPU-native Xarray blog](https://xarray.dev/blog/gpu-pipeline?)); for COGs, there's promising libraries
 like [`nvTIFF`](https://docs.nvidia.com/cuda/nvtiff/index.html) and Python bindings
 [`cog3pio`](https://github.com/weiji14/cog3pio) which might enable this.
-
----
-
-### Output
-
-| Column | Type | Description |
-|--------|------|-------------|
-| chip_id | string | e.g., "NT6200_000042" |
-| parent_id | string | e.g., "NT6200" |
-| parent_path | string | Full COG path |
-| embedding | array\<float32\> | 768-dim DOFA embedding |
-| minx | float64 | Chip bounding box (native CRS) |
-| miny | float64 | |
-| maxx | float64 | |
-| maxy | float64 | |
 
 ---
 
