@@ -4,19 +4,18 @@ version = "0.1.0-dev"
 description = "Generate vector embeddings from geospatial imagery at scale."
 authors = [
     { name = "Jordan Pinder", email = "Jordan.Pinder@communities.gov.uk" },
+    { name = "Sam Hearmon", email = "Sam.Hearmon@communities.gov.uk" },
+    { name = "Ben Vigreux", email = "Benjamin.Vigreux@communities.gov.uk" },
 ]
 readme = "README.md"
-keywords = [
-    "geospatial",
-    "embeddings",
-    "remote-sensing",
-    "foundation-models",
-]
+keywords = ["geospatial", "embeddings", "remote-sensing", "foundation-models"]
 requires-python = ">=3.12"
+license = { text = "OGL-UK-3.0" }
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
+    "License :: Other/Proprietary License",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: GIS",

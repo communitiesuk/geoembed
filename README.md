@@ -204,6 +204,14 @@ make build-docs   # static site to site/
 
 Run `make help` to see all available commands.
 
-## License
+## Licence
 
-MIT
+Licensed under the
+[Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+
+Contains public sector information licensed under the Open Government Licence v3.0.
+
+## Acknowledgements
+
+- [Imago](https://data.imago.ac.uk/) and [Databricks](https://databricks.com) for their technical
+feedback.
